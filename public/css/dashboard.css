@@ -1,0 +1,589 @@
+body {
+    font-size: 0.875rem;
+}
+
+.feather {
+    width: 16px;
+    height: 16px;
+    vertical-align: text-bottom;
+}
+
+/*
+ * Sidebar
+ */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100; /* Behind the navbar */
+    padding: 0;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 48px; /* Height of navbar */
+    height: calc(100vh - 48px);
+    padding-top: 0.5rem;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+.sidebar .nav-link {
+    font-weight: 500;
+    color: #333;
+}
+
+.sidebar .nav-link .feather {
+    margin-right: 4px;
+    color: #999;
+}
+
+.sidebar .nav-link.active {
+    color: #007bff;
+}
+
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+    color: inherit;
+}
+
+.sidebar-heading {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+/*
+ * Navbar
+ */
+
+.navbar-brand {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    font-size: 1rem;
+    background-color: rgba(0, 0, 0, 0.25);
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.25);
+}
+
+.navbar .form-control {
+    padding: 0.75rem 1rem;
+    border-width: 0;
+    border-radius: 0;
+}
+
+.form-control-dark {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.form-control-dark:focus {
+    border-color: transparent;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
+}
+
+/*
+ * Utilities
+ */
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+@-webkit-keyframes chartjs-render-animation {
+    from {
+        opacity: 0.99;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes chartjs-render-animation {
+    from {
+        opacity: 0.99;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.chartjs-render-monitor {
+    -webkit-animation: chartjs-render-animation 0.001s;
+    animation: chartjs-render-animation 0.001s;
+}
+@font-face {
+    font-weight: 400;
+    font-style: normal;
+    font-family: "Inter-Loom";
+
+    src: url("https://cdn.loom.com/assets/fonts/inter/Inter-UI-Regular.woff2")
+        format("woff2");
+}
+@font-face {
+    font-weight: 400;
+    font-style: italic;
+    font-family: "Inter-Loom";
+
+    src: url("https://cdn.loom.com/assets/fonts/inter/Inter-UI-Italic.woff2")
+        format("woff2");
+}
+
+@font-face {
+    font-weight: 500;
+    font-style: normal;
+    font-family: "Inter-Loom";
+
+    src: url("https://cdn.loom.com/assets/fonts/inter/Inter-UI-Medium.woff2")
+        format("woff2");
+}
+@font-face {
+    font-weight: 500;
+    font-style: italic;
+    font-family: "Inter-Loom";
+
+    src: url("https://cdn.loom.com/assets/fonts/inter/Inter-UI-MediumItalic.woff2")
+        format("woff2");
+}
+
+@font-face {
+    font-weight: 700;
+    font-style: normal;
+    font-family: "Inter-Loom";
+
+    src: url("https://cdn.loom.com/assets/fonts/inter/Inter-UI-Bold.woff2")
+        format("woff2");
+}
+@font-face {
+    font-weight: 700;
+    font-style: italic;
+    font-family: "Inter-Loom";
+
+    src: url("https://cdn.loom.com/assets/fonts/inter/Inter-UI-BoldItalic.woff2")
+        format("woff2");
+}
+
+@font-face {
+    font-weight: 900;
+    font-style: normal;
+    font-family: "Inter-Loom";
+
+    src: url("https://cdn.loom.com/assets/fonts/inter/Inter-UI-Black.woff2")
+        format("woff2");
+}
+@font-face {
+    font-weight: 900;
+    font-style: italic;
+    font-family: "Inter-Loom";
+
+    src: url("https://cdn.loom.com/assets/fonts/inter/Inter-UI-BlackItalic.woff2")
+        format("woff2");
+}
+:root {
+    --lns-unit: 0.5rem;
+    --lns-fontSize-small: calc(1.5 * var(--lns-unit, 8px));
+    --lns-lineHeight-small: 1.5;
+    --lns-fontSize-medium: calc(1.75 * var(--lns-unit, 8px));
+    --lns-lineHeight-medium: 1.58;
+    --lns-fontSize-large: calc(2.25 * var(--lns-unit, 8px));
+    --lns-lineHeight-large: 1.56;
+    --lns-fontSize-xlarge: calc(2.8 * var(--lns-unit, 8px));
+    --lns-lineHeight-xlarge: 1.43;
+    --lns-fontSize-xxlarge: calc(4 * var(--lns-unit, 8px));
+    --lns-lineHeight-xxlarge: 1.2;
+    --lns-fontWeight-normal: 400;
+    --lns-fontWeight-semiBold: 600;
+    --lns-radius-medium: 4px;
+    --lns-radius-large: 8px;
+    --lns-shadow-small: 0 1px 4px hsla(0, 0%, 0%, 0.15);
+    --lns-shadow-medium: 0 1px 4px hsla(0, 0%, 0%, 0.1),
+        0 4px 16px hsla(0, 0%, 0%, 0.07);
+    --lns-shadow-large: 0 1px 4px hsla(0, 0%, 0%, 0.07),
+        0 6px 24px hsla(0, 0%, 0%, 0.1);
+    --lns-space-xsmall: calc(0.5 * var(--lns-unit, 8px));
+    --lns-space-small: calc(1 * var(--lns-unit, 8px));
+    --lns-space-medium: calc(2 * var(--lns-unit, 8px));
+    --lns-space-large: calc(3 * var(--lns-unit, 8px));
+    --lns-space-xlarge: calc(5 * var(--lns-unit, 8px));
+    --lns-space-xxlarge: calc(8 * var(--lns-unit, 8px));
+    --lns-color-purple: hsla(230, 84%, 63%, 1);
+    --lns-color-salmon: hsla(359, 98%, 68%, 1);
+    --lns-color-green: hsla(149, 78%, 53%, 1);
+    --lns-color-blue: hsla(201, 100%, 55%, 1);
+    --lns-color-red: hsla(356, 86%, 55%, 1);
+    --lns-color-yellow: hsla(40, 100%, 66%, 1);
+    --lns-color-grey8: hsla(230, 11%, 19%, 1);
+    --lns-color-grey7: hsla(230, 10%, 30%, 1);
+    --lns-color-grey6: hsla(230, 9%, 45%, 1);
+    --lns-color-grey5: hsla(230, 8%, 60%, 1);
+    --lns-color-grey4: hsla(230, 7%, 75%, 1);
+    --lns-color-grey3: hsla(230, 7%, 84%, 1);
+    --lns-color-grey2: hsla(230, 7%, 92%, 1);
+    --lns-color-grey1: hsla(230, 7%, 97%, 1);
+    --lns-color-white: hsla(230, 7%, 100%, 1);
+    --lns-themeLight-color-body: hsla(230, 11%, 19%, 1);
+    --lns-themeLight-color-bodyDimmed: hsla(230, 40%, 19%, 0.6);
+    --lns-themeLight-color-background: hsla(230, 7%, 100%, 1);
+    --lns-themeLight-color-backgroundHover: hsla(230, 8%, 92%, 1);
+    --lns-themeLight-color-backgroundActive: hsla(230, 7%, 84%, 1);
+    --lns-themeLight-color-overlay: hsla(230, 7%, 100%, 1);
+    --lns-themeLight-color-primary: hsla(230, 84%, 63%, 1);
+    --lns-themeLight-color-primaryHover: hsla(230, 84%, 53%, 1);
+    --lns-themeLight-color-primaryActive: hsla(230, 84%, 43%, 1);
+    --lns-themeLight-color-focusRing: hsla(230, 84%, 63%, 0.5);
+    --lns-themeLight-color-record: hsla(359, 98%, 68%, 1);
+    --lns-themeLight-color-recordHover: hsla(359, 98%, 58%, 1);
+    --lns-themeLight-color-recordActive: hsla(359, 98%, 48%, 1);
+    --lns-themeLight-color-border: hsla(230, 9%, 45%, 0.2);
+    --lns-themeLight-color-disabledContent: hsla(230, 8%, 60%, 1);
+    --lns-themeLight-color-disabledBackground: hsla(230, 7%, 92%, 1);
+    --lns-themeLight-color-backdrop: hsla(230, 11%, 19%, 0.5);
+    --lns-themeLight-color-formFieldBorder: hsla(230, 7%, 84%, 1);
+    --lns-themeLight-color-formFieldBackground: hsla(230, 7%, 100%, 1);
+    --lns-themeDark-color-body: hsla(230, 7%, 97%, 1);
+    --lns-themeDark-color-bodyDimmed: hsla(230, 40%, 97%, 0.6);
+    --lns-themeDark-color-background: hsla(230, 11%, 19%, 1);
+    --lns-themeDark-color-backgroundHover: hsla(230, 11%, 26%, 1);
+    --lns-themeDark-color-backgroundActive: hsla(230, 11%, 14%, 1);
+    --lns-themeDark-color-overlay: hsla(230, 10%, 30%, 1);
+    --lns-themeDark-color-primary: hsla(230, 84%, 63%, 1);
+    --lns-themeDark-color-primaryHover: hsla(230, 84%, 53%, 1);
+    --lns-themeDark-color-primaryActive: hsla(230, 84%, 43%, 1);
+    --lns-themeDark-color-focusRing: hsla(230, 84%, 63%, 0.5);
+    --lns-themeDark-color-record: hsla(359, 98%, 68%, 1);
+    --lns-themeDark-color-recordHover: hsla(359, 98%, 58%, 1);
+    --lns-themeDark-color-recordActive: hsla(359, 98%, 48%, 1);
+    --lns-themeDark-color-border: hsla(230, 7%, 75%, 0.2);
+    --lns-themeDark-color-disabledContent: hsla(230, 8%, 60%, 1);
+    --lns-themeDark-color-disabledBackground: hsla(230, 10%, 30%, 1);
+    --lns-themeDark-color-backdrop: hsla(230, 11%, 19%, 0.5);
+    --lns-themeDark-color-formFieldBorder: hsla(230, 9%, 45%, 1);
+    --lns-themeDark-color-formFieldBackground: hsla(230, 11%, 19%, 1);
+}
+
+:root,
+.theme-light {
+    --lns-color-body: var(--lns-themeLight-color-body);
+    --lns-color-bodyDimmed: var(--lns-themeLight-color-bodyDimmed);
+    --lns-color-background: var(--lns-themeLight-color-background);
+    --lns-color-backgroundHover: var(--lns-themeLight-color-backgroundHover);
+    --lns-color-backgroundActive: var(--lns-themeLight-color-backgroundActive);
+    --lns-color-overlay: var(--lns-themeLight-color-overlay);
+    --lns-color-primary: var(--lns-themeLight-color-primary);
+    --lns-color-primaryHover: var(--lns-themeLight-color-primaryHover);
+    --lns-color-primaryActive: var(--lns-themeLight-color-primaryActive);
+    --lns-color-focusRing: var(--lns-themeLight-color-focusRing);
+    --lns-color-record: var(--lns-themeLight-color-record);
+    --lns-color-recordHover: var(--lns-themeLight-color-recordHover);
+    --lns-color-recordActive: var(--lns-themeLight-color-recordActive);
+    --lns-color-border: var(--lns-themeLight-color-border);
+    --lns-color-disabledContent: var(--lns-themeLight-color-disabledContent);
+    --lns-color-disabledBackground: var(
+        --lns-themeLight-color-disabledBackground
+    );
+    --lns-color-backdrop: var(--lns-themeLight-color-backdrop);
+    --lns-color-formFieldBorder: var(--lns-themeLight-color-formFieldBorder);
+    --lns-color-formFieldBackground: var(
+        --lns-themeLight-color-formFieldBackground
+    );
+}
+
+.theme-dark {
+    --lns-color-body: var(--lns-themeDark-color-body);
+    --lns-color-bodyDimmed: var(--lns-themeDark-color-bodyDimmed);
+    --lns-color-background: var(--lns-themeDark-color-background);
+    --lns-color-backgroundHover: var(--lns-themeDark-color-backgroundHover);
+    --lns-color-backgroundActive: var(--lns-themeDark-color-backgroundActive);
+    --lns-color-overlay: var(--lns-themeDark-color-overlay);
+    --lns-color-primary: var(--lns-themeDark-color-primary);
+    --lns-color-primaryHover: var(--lns-themeDark-color-primaryHover);
+    --lns-color-primaryActive: var(--lns-themeDark-color-primaryActive);
+    --lns-color-focusRing: var(--lns-themeDark-color-focusRing);
+    --lns-color-record: var(--lns-themeDark-color-record);
+    --lns-color-recordHover: var(--lns-themeDark-color-recordHover);
+    --lns-color-recordActive: var(--lns-themeDark-color-recordActive);
+    --lns-color-border: var(--lns-themeDark-color-border);
+    --lns-color-disabledContent: var(--lns-themeDark-color-disabledContent);
+    --lns-color-disabledBackground: var(
+        --lns-themeDark-color-disabledBackground
+    );
+    --lns-color-backdrop: var(--lns-themeDark-color-backdrop);
+    --lns-color-formFieldBorder: var(--lns-themeDark-color-formFieldBorder);
+    --lns-color-formFieldBackground: var(
+        --lns-themeDark-color-formFieldBackground
+    );
+}
+
+:root {
+    --lns-unit: 0.5rem;
+    --lns-fontSize-small: calc(1.5 * var(--lns-unit, 8px));
+    --lns-lineHeight-small: 1.5;
+    --lns-fontSize-medium: calc(1.75 * var(--lns-unit, 8px));
+    --lns-lineHeight-medium: 1.58;
+    --lns-fontSize-large: calc(2.25 * var(--lns-unit, 8px));
+    --lns-lineHeight-large: 1.56;
+    --lns-fontSize-xlarge: calc(2.8 * var(--lns-unit, 8px));
+    --lns-lineHeight-xlarge: 1.43;
+    --lns-fontSize-xxlarge: calc(4 * var(--lns-unit, 8px));
+    --lns-lineHeight-xxlarge: 1.2;
+    --lns-fontWeight-normal: 400;
+    --lns-fontWeight-semiBold: 600;
+    --lns-radius-medium: 4px;
+    --lns-radius-large: 8px;
+    --lns-shadow-small: 0 1px 4px hsla(0, 0%, 0%, 0.15);
+    --lns-shadow-medium: 0 1px 4px hsla(0, 0%, 0%, 0.1),
+        0 4px 16px hsla(0, 0%, 0%, 0.07);
+    --lns-shadow-large: 0 1px 4px hsla(0, 0%, 0%, 0.07),
+        0 6px 24px hsla(0, 0%, 0%, 0.1);
+    --lns-space-xsmall: calc(0.5 * var(--lns-unit, 8px));
+    --lns-space-small: calc(1 * var(--lns-unit, 8px));
+    --lns-space-medium: calc(2 * var(--lns-unit, 8px));
+    --lns-space-large: calc(3 * var(--lns-unit, 8px));
+    --lns-space-xlarge: calc(5 * var(--lns-unit, 8px));
+    --lns-space-xxlarge: calc(8 * var(--lns-unit, 8px));
+    --lns-color-purple: hsla(230, 84%, 63%, 1);
+    --lns-color-salmon: hsla(359, 98%, 68%, 1);
+    --lns-color-green: hsla(149, 78%, 53%, 1);
+    --lns-color-blue: hsla(201, 100%, 55%, 1);
+    --lns-color-red: hsla(356, 86%, 55%, 1);
+    --lns-color-yellow: hsla(40, 100%, 66%, 1);
+    --lns-color-grey8: hsla(230, 11%, 19%, 1);
+    --lns-color-grey7: hsla(230, 10%, 30%, 1);
+    --lns-color-grey6: hsla(230, 9%, 45%, 1);
+    --lns-color-grey5: hsla(230, 8%, 60%, 1);
+    --lns-color-grey4: hsla(230, 7%, 75%, 1);
+    --lns-color-grey3: hsla(230, 7%, 84%, 1);
+    --lns-color-grey2: hsla(230, 7%, 92%, 1);
+    --lns-color-grey1: hsla(230, 7%, 97%, 1);
+    --lns-color-white: hsla(230, 7%, 100%, 1);
+    --lns-themeLight-color-body: hsla(230, 11%, 19%, 1);
+    --lns-themeLight-color-bodyDimmed: hsla(230, 40%, 19%, 0.6);
+    --lns-themeLight-color-background: hsla(230, 7%, 100%, 1);
+    --lns-themeLight-color-backgroundHover: hsla(230, 8%, 92%, 1);
+    --lns-themeLight-color-backgroundActive: hsla(230, 7%, 84%, 1);
+    --lns-themeLight-color-overlay: hsla(230, 7%, 100%, 1);
+    --lns-themeLight-color-primary: hsla(230, 84%, 63%, 1);
+    --lns-themeLight-color-primaryHover: hsla(230, 84%, 53%, 1);
+    --lns-themeLight-color-primaryActive: hsla(230, 84%, 43%, 1);
+    --lns-themeLight-color-focusRing: hsla(230, 84%, 63%, 0.5);
+    --lns-themeLight-color-record: hsla(359, 98%, 68%, 1);
+    --lns-themeLight-color-recordHover: hsla(359, 98%, 58%, 1);
+    --lns-themeLight-color-recordActive: hsla(359, 98%, 48%, 1);
+    --lns-themeLight-color-border: hsla(230, 9%, 45%, 0.2);
+    --lns-themeLight-color-disabledContent: hsla(230, 8%, 60%, 1);
+    --lns-themeLight-color-disabledBackground: hsla(230, 7%, 92%, 1);
+    --lns-themeLight-color-backdrop: hsla(230, 11%, 19%, 0.5);
+    --lns-themeLight-color-formFieldBorder: hsla(230, 7%, 84%, 1);
+    --lns-themeLight-color-formFieldBackground: hsla(230, 7%, 100%, 1);
+    --lns-themeDark-color-body: hsla(230, 7%, 97%, 1);
+    --lns-themeDark-color-bodyDimmed: hsla(230, 40%, 97%, 0.6);
+    --lns-themeDark-color-background: hsla(230, 11%, 19%, 1);
+    --lns-themeDark-color-backgroundHover: hsla(230, 11%, 26%, 1);
+    --lns-themeDark-color-backgroundActive: hsla(230, 11%, 14%, 1);
+    --lns-themeDark-color-overlay: hsla(230, 10%, 30%, 1);
+    --lns-themeDark-color-primary: hsla(230, 84%, 63%, 1);
+    --lns-themeDark-color-primaryHover: hsla(230, 84%, 53%, 1);
+    --lns-themeDark-color-primaryActive: hsla(230, 84%, 43%, 1);
+    --lns-themeDark-color-focusRing: hsla(230, 84%, 63%, 0.5);
+    --lns-themeDark-color-record: hsla(359, 98%, 68%, 1);
+    --lns-themeDark-color-recordHover: hsla(359, 98%, 58%, 1);
+    --lns-themeDark-color-recordActive: hsla(359, 98%, 48%, 1);
+    --lns-themeDark-color-border: hsla(230, 7%, 75%, 0.2);
+    --lns-themeDark-color-disabledContent: hsla(230, 8%, 60%, 1);
+    --lns-themeDark-color-disabledBackground: hsla(230, 10%, 30%, 1);
+    --lns-themeDark-color-backdrop: hsla(230, 11%, 19%, 0.5);
+    --lns-themeDark-color-formFieldBorder: hsla(230, 9%, 45%, 1);
+    --lns-themeDark-color-formFieldBackground: hsla(230, 11%, 19%, 1);
+}
+
+:root,
+.theme-light {
+    --lns-color-body: var(--lns-themeLight-color-body);
+    --lns-color-bodyDimmed: var(--lns-themeLight-color-bodyDimmed);
+    --lns-color-background: var(--lns-themeLight-color-background);
+    --lns-color-backgroundHover: var(--lns-themeLight-color-backgroundHover);
+    --lns-color-backgroundActive: var(--lns-themeLight-color-backgroundActive);
+    --lns-color-overlay: var(--lns-themeLight-color-overlay);
+    --lns-color-primary: var(--lns-themeLight-color-primary);
+    --lns-color-primaryHover: var(--lns-themeLight-color-primaryHover);
+    --lns-color-primaryActive: var(--lns-themeLight-color-primaryActive);
+    --lns-color-focusRing: var(--lns-themeLight-color-focusRing);
+    --lns-color-record: var(--lns-themeLight-color-record);
+    --lns-color-recordHover: var(--lns-themeLight-color-recordHover);
+    --lns-color-recordActive: var(--lns-themeLight-color-recordActive);
+    --lns-color-border: var(--lns-themeLight-color-border);
+    --lns-color-disabledContent: var(--lns-themeLight-color-disabledContent);
+    --lns-color-disabledBackground: var(
+        --lns-themeLight-color-disabledBackground
+    );
+    --lns-color-backdrop: var(--lns-themeLight-color-backdrop);
+    --lns-color-formFieldBorder: var(--lns-themeLight-color-formFieldBorder);
+    --lns-color-formFieldBackground: var(
+        --lns-themeLight-color-formFieldBackground
+    );
+}
+
+.theme-dark {
+    --lns-color-body: var(--lns-themeDark-color-body);
+    --lns-color-bodyDimmed: var(--lns-themeDark-color-bodyDimmed);
+    --lns-color-background: var(--lns-themeDark-color-background);
+    --lns-color-backgroundHover: var(--lns-themeDark-color-backgroundHover);
+    --lns-color-backgroundActive: var(--lns-themeDark-color-backgroundActive);
+    --lns-color-overlay: var(--lns-themeDark-color-overlay);
+    --lns-color-primary: var(--lns-themeDark-color-primary);
+    --lns-color-primaryHover: var(--lns-themeDark-color-primaryHover);
+    --lns-color-primaryActive: var(--lns-themeDark-color-primaryActive);
+    --lns-color-focusRing: var(--lns-themeDark-color-focusRing);
+    --lns-color-record: var(--lns-themeDark-color-record);
+    --lns-color-recordHover: var(--lns-themeDark-color-recordHover);
+    --lns-color-recordActive: var(--lns-themeDark-color-recordActive);
+    --lns-color-border: var(--lns-themeDark-color-border);
+    --lns-color-disabledContent: var(--lns-themeDark-color-disabledContent);
+    --lns-color-disabledBackground: var(
+        --lns-themeDark-color-disabledBackground
+    );
+    --lns-color-backdrop: var(--lns-themeDark-color-backdrop);
+    --lns-color-formFieldBorder: var(--lns-themeDark-color-formFieldBorder);
+    --lns-color-formFieldBackground: var(
+        --lns-themeDark-color-formFieldBackground
+    );
+}
+
+:root {
+    --lns-unit: 0.5rem;
+    --lns-fontSize-small: calc(1.5 * var(--lns-unit, 8px));
+    --lns-lineHeight-small: 1.5;
+    --lns-fontSize-medium: calc(1.75 * var(--lns-unit, 8px));
+    --lns-lineHeight-medium: 1.58;
+    --lns-fontSize-large: calc(2.25 * var(--lns-unit, 8px));
+    --lns-lineHeight-large: 1.56;
+    --lns-fontSize-xlarge: calc(2.8 * var(--lns-unit, 8px));
+    --lns-lineHeight-xlarge: 1.43;
+    --lns-fontSize-xxlarge: calc(4 * var(--lns-unit, 8px));
+    --lns-lineHeight-xxlarge: 1.2;
+    --lns-fontWeight-normal: 400;
+    --lns-fontWeight-semiBold: 600;
+    --lns-radius-medium: 4px;
+    --lns-radius-large: 8px;
+    --lns-shadow-small: 0 1px 4px hsla(0, 0%, 0%, 0.15);
+    --lns-shadow-medium: 0 1px 4px hsla(0, 0%, 0%, 0.1),
+        0 4px 16px hsla(0, 0%, 0%, 0.07);
+    --lns-shadow-large: 0 1px 4px hsla(0, 0%, 0%, 0.07),
+        0 6px 24px hsla(0, 0%, 0%, 0.1);
+    --lns-space-xsmall: calc(0.5 * var(--lns-unit, 8px));
+    --lns-space-small: calc(1 * var(--lns-unit, 8px));
+    --lns-space-medium: calc(2 * var(--lns-unit, 8px));
+    --lns-space-large: calc(3 * var(--lns-unit, 8px));
+    --lns-space-xlarge: calc(5 * var(--lns-unit, 8px));
+    --lns-space-xxlarge: calc(8 * var(--lns-unit, 8px));
+    --lns-color-purple: hsla(230, 84%, 63%, 1);
+    --lns-color-salmon: hsla(359, 98%, 68%, 1);
+    --lns-color-green: hsla(149, 78%, 53%, 1);
+    --lns-color-blue: hsla(201, 100%, 55%, 1);
+    --lns-color-red: hsla(356, 86%, 55%, 1);
+    --lns-color-yellow: hsla(40, 100%, 66%, 1);
+    --lns-color-grey8: hsla(230, 11%, 19%, 1);
+    --lns-color-grey7: hsla(230, 10%, 30%, 1);
+    --lns-color-grey6: hsla(230, 9%, 45%, 1);
+    --lns-color-grey5: hsla(230, 8%, 60%, 1);
+    --lns-color-grey4: hsla(230, 7%, 75%, 1);
+    --lns-color-grey3: hsla(230, 7%, 84%, 1);
+    --lns-color-grey2: hsla(230, 7%, 92%, 1);
+    --lns-color-grey1: hsla(230, 7%, 97%, 1);
+    --lns-color-white: hsla(230, 7%, 100%, 1);
+    --lns-themeLight-color-body: hsla(230, 11%, 19%, 1);
+    --lns-themeLight-color-bodyDimmed: hsla(230, 40%, 19%, 0.6);
+    --lns-themeLight-color-background: hsla(230, 7%, 100%, 1);
+    --lns-themeLight-color-backgroundHover: hsla(230, 8%, 92%, 1);
+    --lns-themeLight-color-backgroundActive: hsla(230, 7%, 84%, 1);
+    --lns-themeLight-color-overlay: hsla(230, 7%, 100%, 1);
+    --lns-themeLight-color-primary: hsla(230, 84%, 63%, 1);
+    --lns-themeLight-color-primaryHover: hsla(230, 84%, 53%, 1);
+    --lns-themeLight-color-primaryActive: hsla(230, 84%, 43%, 1);
+    --lns-themeLight-color-focusRing: hsla(230, 84%, 63%, 0.5);
+    --lns-themeLight-color-record: hsla(359, 98%, 68%, 1);
+    --lns-themeLight-color-recordHover: hsla(359, 98%, 58%, 1);
+    --lns-themeLight-color-recordActive: hsla(359, 98%, 48%, 1);
+    --lns-themeLight-color-border: hsla(230, 9%, 45%, 0.2);
+    --lns-themeLight-color-disabledContent: hsla(230, 8%, 60%, 1);
+    --lns-themeLight-color-disabledBackground: hsla(230, 7%, 92%, 1);
+    --lns-themeLight-color-backdrop: hsla(230, 11%, 19%, 0.5);
+    --lns-themeLight-color-formFieldBorder: hsla(230, 7%, 84%, 1);
+    --lns-themeLight-color-formFieldBackground: hsla(230, 7%, 100%, 1);
+    --lns-themeDark-color-body: hsla(230, 7%, 97%, 1);
+    --lns-themeDark-color-bodyDimmed: hsla(230, 40%, 97%, 0.6);
+    --lns-themeDark-color-background: hsla(230, 11%, 19%, 1);
+    --lns-themeDark-color-backgroundHover: hsla(230, 11%, 26%, 1);
+    --lns-themeDark-color-backgroundActive: hsla(230, 11%, 14%, 1);
+    --lns-themeDark-color-overlay: hsla(230, 10%, 30%, 1);
+    --lns-themeDark-color-primary: hsla(230, 84%, 63%, 1);
+    --lns-themeDark-color-primaryHover: hsla(230, 84%, 53%, 1);
+    --lns-themeDark-color-primaryActive: hsla(230, 84%, 43%, 1);
+    --lns-themeDark-color-focusRing: hsla(230, 84%, 63%, 0.5);
+    --lns-themeDark-color-record: hsla(359, 98%, 68%, 1);
+    --lns-themeDark-color-recordHover: hsla(359, 98%, 58%, 1);
+    --lns-themeDark-color-recordActive: hsla(359, 98%, 48%, 1);
+    --lns-themeDark-color-border: hsla(230, 7%, 75%, 0.2);
+    --lns-themeDark-color-disabledContent: hsla(230, 8%, 60%, 1);
+    --lns-themeDark-color-disabledBackground: hsla(230, 10%, 30%, 1);
+    --lns-themeDark-color-backdrop: hsla(230, 11%, 19%, 0.5);
+    --lns-themeDark-color-formFieldBorder: hsla(230, 9%, 45%, 1);
+    --lns-themeDark-color-formFieldBackground: hsla(230, 11%, 19%, 1);
+}
+
+:root,
+.theme-light {
+    --lns-color-body: var(--lns-themeLight-color-body);
+    --lns-color-bodyDimmed: var(--lns-themeLight-color-bodyDimmed);
+    --lns-color-background: var(--lns-themeLight-color-background);
+    --lns-color-backgroundHover: var(--lns-themeLight-color-backgroundHover);
+    --lns-color-backgroundActive: var(--lns-themeLight-color-backgroundActive);
+    --lns-color-overlay: var(--lns-themeLight-color-overlay);
+    --lns-color-primary: var(--lns-themeLight-color-primary);
+    --lns-color-primaryHover: var(--lns-themeLight-color-primaryHover);
+    --lns-color-primaryActive: var(--lns-themeLight-color-primaryActive);
+    --lns-color-focusRing: var(--lns-themeLight-color-focusRing);
+    --lns-color-record: var(--lns-themeLight-color-record);
+    --lns-color-recordHover: var(--lns-themeLight-color-recordHover);
+    --lns-color-recordActive: var(--lns-themeLight-color-recordActive);
+    --lns-color-border: var(--lns-themeLight-color-border);
+    --lns-color-disabledContent: var(--lns-themeLight-color-disabledContent);
+    --lns-color-disabledBackground: var(
+        --lns-themeLight-color-disabledBackground
+    );
+    --lns-color-backdrop: var(--lns-themeLight-color-backdrop);
+    --lns-color-formFieldBorder: var(--lns-themeLight-color-formFieldBorder);
+    --lns-color-formFieldBackground: var(
+        --lns-themeLight-color-formFieldBackground
+    );
+}
+
+.theme-dark {
+    --lns-color-body: var(--lns-themeDark-color-body);
+    --lns-color-bodyDimmed: var(--lns-themeDark-color-bodyDimmed);
+    --lns-color-background: var(--lns-themeDark-color-background);
+    --lns-color-backgroundHover: var(--lns-themeDark-color-backgroundHover);
+    --lns-color-backgroundActive: var(--lns-themeDark-color-backgroundActive);
+    --lns-color-overlay: var(--lns-themeDark-color-overlay);
+    --lns-color-primary: var(--lns-themeDark-color-primary);
+    --lns-color-primaryHover: var(--lns-themeDark-color-primaryHover);
+    --lns-color-primaryActive: var(--lns-themeDark-color-primaryActive);
+    --lns-color-focusRing: var(--lns-themeDark-color-focusRing);
+    --lns-color-record: var(--lns-themeDark-color-record);
+    --lns-color-recordHover: var(--lns-themeDark-color-recordHover);
+    --lns-color-recordActive: var(--lns-themeDark-color-recordActive);
+    --lns-color-border: var(--lns-themeDark-color-border);
+    --lns-color-disabledContent: var(--lns-themeDark-color-disabledContent);
+    --lns-color-disabledBackground: var(
+        --lns-themeDark-color-disabledBackground
+    );
+    --lns-color-backdrop: var(--lns-themeDark-color-backdrop);
+    --lns-color-formFieldBorder: var(--lns-themeDark-color-formFieldBorder);
+    --lns-color-formFieldBackground: var(
+        --lns-themeDark-color-formFieldBackground
+    );
+}
