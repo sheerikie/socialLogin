@@ -1,14 +1,13 @@
 @extends('layouts.app')
-
+  <!-- Styles -->
+  <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 @section('content')
-<div class="container">
+<div class="container text-center">
+    @include('partials.header')
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div>
-
-
                 <div>
-
                     <div class="form-group">
 
                     <div id="logreg-forms">
