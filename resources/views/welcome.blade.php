@@ -13,12 +13,9 @@
                         <a href="/login" class="btn btn-lg btn-secondary">Learn more</a>
                       </p>
                     </main>
+                    @include('partials.footer')
 
-                    <footer class="mastfoot mt-auto">
-                      <div class="inner">
-                        <p>Made By <a href="#">Adrian</a></p>
-                      </div>
-                    </footer>
+
                   </div>
 
 @endsection

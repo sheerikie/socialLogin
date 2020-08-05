@@ -1,12 +1,10 @@
 @extends('layouts.app')
 
-  <!-- Styles -->
-  <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-  <link href="{{ asset('css/header.css') }}" rel="stylesheet">
 @section('content')
-
-
-<div class="container text-center">
+  <!-- Styles -->
+  <link href="{{ asset('css/header.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+<div class="cover-container d-flex h-100 p-3 mx-auto flex-column text-center">
     @include('partials.header')
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -42,8 +40,8 @@
                                 @enderror
 
 
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                                <div class="form-check" >
+                                    <input class="form-check-input" style="float: left" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                                     <label class="form-check-label" for="remember">
                                         {{ __('Remember Me') }}
@@ -69,5 +67,8 @@
             </div>
         </div>
     </div>
+    @include('partials.footer')
 </div>
+
+
 @endsection
